@@ -122,6 +122,8 @@ export const registerSettingsCore = function(systemManager, rollHandlers, styles
     default: "foundryVTT",
     choices: styleChoices,
     onChange: value => {
+      console.log('changing the style value')
+      console.log(value)
       Utils.switchCSS(value);
       onChangeFunction("style", value);
     }
