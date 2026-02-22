@@ -1,6 +1,6 @@
 {
   "id": "token-action-hud-core",
-  "title": "Dannys module",
+  "title": "Custom Token Action HUD Core",
   "description": "Token Action HUD is a repositionable HUD of actions for a selected token",
   "authors": [
     {

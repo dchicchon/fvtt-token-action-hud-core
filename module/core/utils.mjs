@@ -512,22 +512,17 @@ export class Utils {
    * @param {string} style The 'style' setting value
    */
   static switchCSS(style) {
-    console.log('Utils.switchCSS')
     const tahElement = document.querySelector("#token-action-hud-app");
-    console.log(tahElement)
     if (tahElement) {
       const styleClass = foundry.utils.isNewerVersion(game.version, "12.999") && ["dockedLeft", "dockedCenterRight", "dockedRight"].includes(style)
         ? `${CSS_STYLE[style].class}-v13`
         : CSS_STYLE[style].class;
 
-       console.log(`styleClass: ${styleClass}`)
       if (tahElement.classList.contains(styleClass)) return;
       const classesToRemove = [...tahElement.classList].filter(c => c !== "tah-expanded");
       if (classesToRemove.length) {
-        console.log('classeToRemove.length.remove()')
         tahElement.classList.remove(classesToRemove);
       }
-      console.log('adding class to tahElement.classList')
       tahElement.classList.add(styleClass);
     }
   }
